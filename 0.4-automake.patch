@@ -1,0 +1,11 @@
+--- origsrc/gt-0.4/src/Makefile.am	2015-02-05 19:28:02.155396700 -0600
++++ src/gt-0.4/src/Makefile.am	2015-02-05 19:29:36.384362300 -0600
+@@ -36,7 +36,7 @@ sf2cfg_SOURCES = sf2cfg.c readsbk.c
+ sfz2pat_SOURCES = sfz2pat.c tables.c
+ 
+ noinst_HEADERS = gtim.h common.h readmidi.h playmidi.h resample.h mix.h instrum.h \
+-	tables.h butter.h controls.h output.h filter.h sbk.h sflayer.h effects.h \
++	tables.h butter.h controls.h output.h filter.h sbk.h sflayer.h effects.h
+ 
+ cfg.c: cfg.l
+ 	rm -f cfg.c

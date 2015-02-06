@@ -1,0 +1,30 @@
+NAME="gt"
+VERSION=0.4
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="MIDI utilties with enhanced GUS format support"
+DESCRIPTION="Modified timidity midi converter which supportes enhanced gus
+format patches."
+HOMEPAGE=  # defunct
+md5sum=d595e464e6403f4bd8c3cfc7c42b2aec
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/gt/gt-${VERSION}-clean.tar.gz/${md5sum}/gt-${VERSION}-clean.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-noac3.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-compile-fix.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-optflags.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-config-default-velocity-layer.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-ppc-compile-fix.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-unsf-bigendian-fix.patch
+	http://pkgs.fedoraproject.org/cgit/gt.git/plain/gt-0.4-unsf-tremolo.patch
+	0.4-automake.patch
+	0.4-cygwin-compile.patch
+"
+
+CFLAGS+=" -fsigned-char"
+
+PKG_NAMES="gt soundfont-utils"
+gt_REQUIRES="soundfont-fluid-lite-patches"
+gt_CONTENTS="usr/bin/gt.exe usr/share/doc/gt/ usr/share/man/man1/gt.1*"
+soundfont_utils_SUMMARY="Soundfont conversion utilties"
+soundfont_utils_DOCS="COPYING utils/README* utils/GUSSF2-SPEC"
+soundfont_utils_CONTENTS="--exclude=gt.* usr/bin/ usr/share/man/"
