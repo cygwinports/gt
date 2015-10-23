@@ -2,8 +2,8 @@ NAME="gt"
 VERSION=0.4
 RELEASE=1
 CATEGORY="Audio"
-SUMMARY="MIDI utilties with enhanced GUS format support"
-DESCRIPTION="Modified timidity midi converter which supportes enhanced gus
+SUMMARY="MIDI utilities with enhanced GUS format support"
+DESCRIPTION="Modified timidity midi converter which supports enhanced gus
 format patches."
 HOMEPAGE=  # defunct
 md5sum=d595e464e6403f4bd8c3cfc7c42b2aec
